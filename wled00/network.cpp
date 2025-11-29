@@ -107,10 +107,10 @@ const ethernet_settings ethernetBoards[] = {
 
   // ABC! WLED Controller V43 + Ethernet Shield & compatible
   {
-    1,                    // eth_address, 
-    5,                    // eth_power, 
-    23,                   // eth_mdc, 
-    33,                   // eth_mdio, 
+    1,                    // eth_address,
+    5,                    // eth_power,
+    23,                   // eth_mdc,
+    33,                   // eth_mdio,
     ETH_PHY_LAN8720,      // eth_type,
     ETH_CLOCK_GPIO17_OUT	// eth_clk_mode
   },
@@ -134,7 +134,7 @@ const ethernet_settings ethernetBoards[] = {
     ETH_PHY_LAN8720,      // eth_type,
     ETH_CLOCK_GPIO0_OUT   // eth_clk_mode
   },
-  
+
   // LILYGO T-POE Pro
   // https://github.com/Xinyuan-LilyGO/LilyGO-T-ETH-Series/blob/master/schematic/T-POE-PRO.pdf
   {
@@ -144,7 +144,19 @@ const ethernet_settings ethernetBoards[] = {
     18,			              // eth_mdio,
     ETH_PHY_LAN8720,      // eth_type,
     ETH_CLOCK_GPIO0_OUT	// eth_clk_mode
+  },
+
+  // Gledopto Series with Ethernet
+  // https://gledopto.com/h-pd-63.html and https://gledopto.com/h-pd-64.html
+  {
+    1,                    // eth_address,
+    5,                    // eth_power,
+    23,                   // eth_mdc,
+    33,                   // eth_mdio,
+    ETH_PHY_LAN8720,      // eth_type,
+    ETH_CLOCK_GPIO0_IN	  // eth_clk_mode
   }
+
 };
 #endif
 
@@ -211,4 +223,3 @@ void WiFiEvent(WiFiEvent_t event)
       break;
   }
 }
-
